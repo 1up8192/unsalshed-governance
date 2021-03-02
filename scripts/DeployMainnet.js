@@ -17,7 +17,7 @@ async function main(accountIndex, gasPriceGWei) {
         const lock = await ethers.getContractAt("Lock", lockAddress);
     
         if (await lock.lock()){
-            console.log("Someone else already deplyoed the governance aready");
+            console.log("Someone else already deployed the governance aready");
             process.exit();
         }
     }
@@ -36,8 +36,8 @@ async function main(accountIndex, gasPriceGWei) {
     let sumGasUsed = ethers.BigNumber.from(0);
 
     const tokenRecipient = accounts[accountIndex].address;
-    const timeLockAdmin = "0x98f8c93cC2EA65FEDEe9d02c1D3b12d728f54A1A";
-    const guardian = "0xfBE57d9a3A02b629C2940f0d281EA7ddae0B47bd";
+    const timeLockAdmin = "0xE4AcDB790f4e9E4F6fD7831011D44afA3ddFfef8";
+    const guardian = "0x3fDbA971a35e238cea1602f50824E296BaD85980";
 
     console.log("token recipient: ", tokenRecipient)
     // This gets the contract from 
